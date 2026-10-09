@@ -14,6 +14,11 @@ authors = [
     { name = "Susan Dina Ghiassian" },
     { name = "Joerg Menche" },
 ]
+maintainers = [
+    { name = "Johannes Kersting" },
+    { name = "Chloé Bucheron" },
+    { name = "Joaquim Aguirre-Plans" },
+]
 keywords = ["bioinformatics", "network medicine", "disease module", "interactome"]
 classifiers = [
     "Programming Language :: Python :: 3",
