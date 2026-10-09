@@ -10,6 +10,10 @@ by Susan Dina Ghiassian, Joerg Menche & Albert-Laszlo Barabasi
 
 The DIAMOnD website can be found at: 
 
+Installation as a package:
+<em><pre>pip install git+https://github.com/REPO4EU/DIAMOnD.git</pre></em>
+This provides the command <em>diamond-module</em>, which takes the same arguments as DIAMOnD.py, and lets you <em>import DIAMOnD</em> in Python.
+
 Instruction to use the source code:
 1. Download the code.
 2. Make sure you are in the main directory where the code is.

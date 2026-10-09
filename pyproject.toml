@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "diamond-module"
+dynamic = ["version"]
+description = "DIAMOnD: DIseAse MOdule Detection in protein-protein interaction networks"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [
+    { name = "Susan Dina Ghiassian" },
+    { name = "Joerg Menche" },
+]
+keywords = ["bioinformatics", "network medicine", "disease module", "interactome"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "networkx>=2.4",
+    "numpy>=1.19",
+    "scipy>=1.5",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+diamond-module = "DIAMOnD:main"
+
+[project.urls]
+Homepage = "https://github.com/REPO4EU/DIAMOnD"
+Paper = "https://doi.org/10.1371/journal.pcbi.1004120"
+
+[tool.hatch.version]
+path = "DIAMOnD.py"
+
+[tool.hatch.build.targets.wheel]
+only-include = ["DIAMOnD.py"]
+
+[tool.hatch.build.targets.sdist]
+include = ["DIAMOnD.py", "Example", "tests", "README.md", "LICENSE"]
