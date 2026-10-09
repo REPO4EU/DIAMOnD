@@ -1,5 +1,7 @@
 # DIAMOnD
 
+This is a maintained fork of [dinaghiassian/DIAMOnD](https://github.com/dinaghiassian/DIAMOnD), packaged for PyPI and bioconda by [REPO4EU](https://github.com/REPO4EU). All credit for the algorithm goes to the original authors; please cite the publication below.
+
 DIAMOnD.py runs the DIAMOnD algorithm as described in
  
  A DIseAse MOdule Detection (DIAMOnD) Algorithm derived from a
@@ -9,6 +11,10 @@ DIAMOnD.py runs the DIAMOnD algorithm as described in
 by Susan Dina Ghiassian, Joerg Menche & Albert-Laszlo Barabasi
 
 The DIAMOnD website can be found at: 
+
+Installation as a package:
+<em><pre>pip install git+https://github.com/REPO4EU/DIAMOnD.git</pre></em>
+This provides the command <em>diamond-module</em>, which takes the same arguments as DIAMOnD.py, and lets you <em>import DIAMOnD</em> in Python.
 
 Instruction to use the source code:
 1. Download the code.

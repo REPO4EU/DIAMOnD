@@ -28,6 +28,8 @@ from collections import defaultdict
 import csv
 import sys
 
+__version__ = '1.0.0'
+
 
 # =============================================================================
 def print_usage():
@@ -156,11 +158,11 @@ def compute_all_gamma_ln(N):
 # =============================================================================
 def logchoose(n, k, gamma_ln):
     if n - k + 1 <= 0:
-        return scipy.infty
+        return np.inf
     lgn1 = gamma_ln[n + 1]
     lgk1 = gamma_ln[k + 1]
     lgnk1 = gamma_ln[n - k + 1]
-    return lgn1 - [lgnk1 + lgk1]
+    return lgn1 - (lgnk1 + lgk1)
 
 
 # =============================================================================
@@ -423,7 +425,7 @@ def DIAMOnD(G_original, seed_genes, max_number_of_added_nodes, alpha, outfile=No
 # ===========================================================================
 
 
-if __name__ == '__main__':
+def main():
     # -----------------------------------------------------
     # Checking for input from the command line:
     # -----------------------------------------------------
@@ -454,3 +456,7 @@ if __name__ == '__main__':
                           outfile=outfile_name)
 
     print("\n results have been saved to '%s' \n" % outfile_name)
+
+
+if __name__ == '__main__':
+    main()
